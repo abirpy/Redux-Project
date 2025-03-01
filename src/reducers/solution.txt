@@ -7,11 +7,17 @@ const initialState = {
 const counterReducer = (state = initialState, action) => {
     switch (action.type) {
         // TODO: write the code for case INCREMENT
-
-
+        case INCREMENT:
+            return {
+                ...state,
+                count: state.count + 1
+            };
         // TODO: write the code for case DECREMENT
-        
-
+        case DECREMENT:
+            return {
+                ...state,
+                count: state.count - 1
+            };
         default:
             return state;
     }
